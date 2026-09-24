@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>homework2</title>
+
+        <script src="https://aframe.io/releases/1.8.0/aframe.min.js">
+        </script>
+    </head>
+
+    <body>
+
+        <a-scene>
+            <a-assets>
+            <img id="grass-base" src="assets/Gravel_001_BaseColor.jpg">
+    <img id="grass-ambient-occlusion" src="assets\Gravel_001_AmbientOcclusion.jpg">
+     <img id="grass-normal" src="assets\Gravel_001_Normal.jpg">
+     <img id="conicaltreeleaves-base" src="assets\Hedge_001_BaseColor.jpg">
+     <img id="conicaltreeleaves-ambient-occlusion" src="assets\Hedge_001_AmbientOcclusion.jpg">
+     <img id="conicaltreeleaves-normal" src="assets\Hedge_001_normal.jpg">   
+     <img id="treetrunk-base" src="assets\Aspen_bark_001_COLOR.jpg">
+     <img id="treetrunk-ambient-occlusion" src="assets\Aspen_bark_001_OCC.jpg">
+     <img id="treetrunk-normal" src="assets\Aspen_bark_001_NORM.jpg">
+     <img id="build-base" src="assets\Cork_002_COLOR.jpg">
+        <img id="build-ambient-occlusion" src="assets\Cork_002_OCC.jpg">
+        <img id="build-normal" src="assets\Cork_002_NORM.jpg">
+            </a-assets>   
+        <a-sky
+                color="skyblue">
+            </a-sky>
+
+
+            <a-plane
+                material= "src: #grass-base; 
+        repeat: 500 500; 
+        ambientOcclusionMap: #grass-ambient-occlusion;
+         ambientOcclusionTextureRepeat: 500 500; 
+         normalMap: #grass-normal; 
+         normalTextureRepeat: 500 500"
+        position="0 0 0"
+         rotation="-90 0 0" 
+         width="500"
+          height="500"
+          ></a-plane>
+         </a-plane>
+            <a-box
+      id="build"
+      material = "src: #build-base; 
+      repeat: 3 5; ambientOcclusionMap: 
+      #build-ambient-occlusion; ambientOcclusionTextureRepeat: 1 1;  
+      normalMap: #build-normal;  normalTextureRepeat: 1 1"
+                position="11 5 -18"
+                width="8"
+                height="10"
+                depth="12">
+            </a-box>
+
+            <a-box
+                color="lightblue"
+                position="7 3 -15"
+                width="0.1"
+                height="1.5"
+                depth="2">
+            </a-box>
+
+            <a-box
+                color="lightblue"
+                position="7 3 -19"
+                width="0.1"
+                height="1.5"
+                depth="2">
+            </a-box>
+
+            <a-box
+                color="lightblue"
+                position="7 6 -15"
+                width="0.1"
+                height="1.5"
+                depth="2">
+            </a-box>
+
+            <a-box
+                color="lightblue"
+                position="7 6 -19"
+                width="0.1"
+                height="1.5"
+                depth="2">
+            </a-box>
+            <a-box
+                color="black"
+                position="7 1.5 -22"
+                width="0.15"
+                height="3"
+                depth="2">
+            </a-box>
+            <a-cylinder
+                color="black"
+                position="5 2 -20"
+                radius="0.1"
+                height="4">
+            </a-cylinder>
+            <a-sphere
+                color="lightyellow"
+                position="5 4 -20"
+                radius="0.35">
+            </a-sphere>
+            <a-cylinder
+                material = "src: #treetrunk-base; 
+        repeat: 3 5; ambientOcclusionMap: #treetrunk-ambient-occlusion;
+        ambientOcclusionTextureRepeat: 3 5; 
+    normalMap: #treetrunk-normal;
+    normalTextureRepeat: 3 5"
+        geometry="radius:0.25; height:3"
+                position="9 1 -7"
+                ></a-cylinder>
+            </a-cylinder>
+            <a-sphere
+              id="conicaltreeleaves"
+    material = "src: #conicaltreeleaves-base; repeat: 2 2; 
+    ambientOcclusionMap: #conicaltreeleaves-ambient-occlusion; ambientOcclusionTextureRepeat: 2 2;
+    normalMap: #conicaltreeleaves-normal; normalTextureRepeat: 2 2;"
+                position="9 2.5 -7"
+                radius="1.5">
+            </a-sphere>
+
+
+
+        </a-scene>
+
+    </body>
+</html>
